@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>JAvA ScrIpt</title>
+    </head>
+    <body>
+    <script>
+        var cars = ["Saab", "Volvo", "BMW"];
+        var f = new Array("mango", "orange", "kiwi");
+        f.push("apple");
+        var text = "<ul>";
+f.forEach(myFunction);
+text += "</ul>";
+function myFunction(value){
+    text+="<li>"+value+"</li>";
+}
+document.write(text);
+document.write(cars.length+"<br>");
+document.write(cars.sort()+"<br>");
+var v1=cars[0];
+var v2=cars[cars.length-1]
+document.write(v1+"<br>");
+document.write(v2+"<br>");
+
+
+
+    </script>
+    </body>
+</html>
