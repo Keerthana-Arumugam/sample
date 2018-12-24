@@ -28,9 +28,8 @@ if(req.body.queryResult.intent.displayName == "movie ticket")
       }
 );
 
-}
+} 
+
 });
 
-app.listen(8080, function () {
-    console.log('Dev app listening on port 8080!');
-});
+
