@@ -14,22 +14,24 @@ if(req.body.queryResult.intent.displayName == "movie ticket")
             "payload": {
               "google": {
                 "expectUserResponse": true,
+               
+            
                 "richResponse": {
                   "items": [
                     {
                       "simpleResponse": {
-                        "textToSpeech": "To book your movie ticket..select and confirm the ticket..."
+                        "textToSpeech": "Response for date and time..."
                       }
                     },
-                    {
-                        "basicCard": {
-                          "title": "Ticket confirmation",
-                          "image": {
-                            "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
-                            "accessibilityText": "Google Logo"
-                          },
-                        }
-                    }
+                    // {
+                    //     "basicCard": {
+                    //       "title": "Ticket confirmation",
+                    //       "image": {
+                    //         "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+                    //         "accessibilityText": "Google Logo"
+                    //       },
+                    //     }
+                    // }
                     ],
                 //   "suggestions": [
                 //     {
@@ -43,8 +45,21 @@ if(req.body.queryResult.intent.displayName == "movie ticket")
                 //     "destinationName": "Website",
                 //     "url": "https://assistant.google.com"
                 //   }
+               
+        
+             },
+             "systemIntent": {
+                "intent": "actions.intent.DATETIME",
+                "data": {
+                  "@type": "type.googleapis.com/google.actions.v2.DateTimeValueSpec",
+                  "dialogSpec": {
+                    "requestDatetimeText": "When do you want to come in?",
+                    "requestDateText": "What is the best date to schedule your appointment?",
+                    "requestTimeText": "What time of day works best for you?"
+                  }
                 }
               }
+            }
             }
           }
 
