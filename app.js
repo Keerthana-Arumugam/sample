@@ -26,7 +26,7 @@ if(req.body.queryResult.intent.displayName == "sample")
           }
         }
       }
-)
+);
 
 }
 });
