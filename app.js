@@ -21,20 +21,28 @@ if(req.body.queryResult.intent.displayName == "movie ticket")
                         "textToSpeech": "To book your movie ticket..select and confirm the ticket..."
                       }
                     },
-                   
-                  ],
-                  "suggestions": [
                     {
-                      "title": "confirm ticket"
-                    },
-                    {
-                      "title": "cancel ticket"
+                        "basicCard": {
+                          "title": "Ticket confirmation",
+                          "image": {
+                            "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+                            "accessibilityText": "Google Logo"
+                          },
+                        }
                     }
-                  ],
-                  "linkOutSuggestion": {
-                    "destinationName": "Website",
-                    "url": "https://assistant.google.com"
-                  }
+                    ],
+                //   "suggestions": [
+                //     {
+                //       "title": "confirm ticket"
+                //     },
+                //     {
+                //       "title": "cancel ticket"
+                //     }
+                //   ],
+                //   "linkOutSuggestion": {
+                //     "destinationName": "Website",
+                //     "url": "https://assistant.google.com"
+                //   }
                 }
               }
             }
@@ -49,3 +57,6 @@ if(req.body.queryResult.intent.displayName == "movie ticket")
 app.listen(process.env.PORT,function(req,res){
     console.log("Running...");
 });
+
+
+
