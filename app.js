@@ -11,21 +11,36 @@ if(req.body.queryResult.intent.displayName == "movie ticket")
 {
     res.json(
     {
-        "payload": {
-          "google": {
-            "expectUserResponse": true,
-            "richResponse": {
-              "items": [
-                {
-                  "simpleResponse": {
-                    "textToSpeech": "click to proceed..."
+            "payload": {
+              "google": {
+                "expectUserResponse": true,
+                "richResponse": {
+                  "items": [
+                    {
+                      "simpleResponse": {
+                        "textToSpeech": "To book your movie ticket..select and confirm the ticket..."
+                      }
+                    },
+                   
+                  ],
+                  "suggestions": [
+                    {
+                      "title": "confirm ticket"
+                    },
+                    {
+                      "title": "cancel ticket"
+                    }
+                  ],
+                  "linkOutSuggestion": {
+                    "destinationName": "Website",
+                    "url": "https://assistant.google.com"
                   }
                 }
-              ]
+              }
             }
           }
-        }
-      }
+
+      
 );
 
 } 
