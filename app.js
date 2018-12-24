@@ -7,7 +7,7 @@ var app            =         express();
 app.post('/',function(req,res){
     console.log("post method");
 
-if(req.body.queryResult.intent.displayName == "sample")
+if(req.body.queryResult.intent.displayName == "movie ticket")
 {
     res.json(
     {
