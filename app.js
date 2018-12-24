@@ -24,7 +24,10 @@ if(req.body.queryResult.intent.displayName == "movie ticket")
                     {
                         "basicCard": {
                           "title": "Ticket confirmation",
-                          "text": "your ticket has been booked"
+                          "image": {
+                            "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+                            "accessibilityText": "Google Logo"
+                          },
                         }
                     }
                     ],
