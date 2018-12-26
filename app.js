@@ -7,8 +7,8 @@ app.use(bodyParser.json());
 app.post('/',function(req,res){
     console.log("post method");
 
-if(req.body.queryResult.intent.displayName == "movie ticket")
-{ console.log("ff", req.body);
+if(req.body.queryResult.intent.displayName == "movie ticket") { 
+    console.log("ff",JSON.stringify(req.body));
     res.json(
     {
             "payload": {
