@@ -18,7 +18,8 @@ if(req.body.queryResult.intent.displayName == "movie ticket") {
                   "items": [
                     {
                       "simpleResponse": {
-                        "textToSpeech": "click to conform!..."
+                        "textToSpeech": "click to conform!...",
+                        "displayText":"choose to conform"
                       }
                     },
                 ],
@@ -52,7 +53,8 @@ else if(req.body.queryResult.intent.action == "confirm ticket")
               "items": [
                 {
                   "simpleResponse": {
-                    "textToSpeech": "This is a Basic Card:"
+                    "textToSpeech": "This is a Basic Card:",
+                    "displayText" : "ticket confirmation"
                   }
                 },
                     {  
