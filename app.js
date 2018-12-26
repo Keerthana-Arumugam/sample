@@ -8,7 +8,7 @@ app.post('/',function(req,res){
     console.log("post method");
 
 if(req.body.queryResult.intent.displayName == "movie ticket") { 
-    console.log("ff",JSON.stringify(req.body));
+    console.log("forintent",JSON.stringify(req.body));
     res.json(
     {
             "payload": {
@@ -43,7 +43,7 @@ if(req.body.queryResult.intent.displayName == "movie ticket") {
 } 
 else if(req.body.queryResult.intent.action == "confirm ticket")
 {
-    console.log("gg", JSON.stringify(req.body));
+    console.log("intentaction",JSON.stringify(req.body));
         res.json(
     {
         "payload": {
