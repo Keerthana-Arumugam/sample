@@ -14,42 +14,25 @@ if(req.body.queryResult.intent.displayName == "movie ticket")
             "payload": {
               "google": {
                 "expectUserResponse": true,
-               
-            
-                "richResponse": {
+                   "richResponse": {
                   "items": [
                     {
                       "simpleResponse": {
-                        "textToSpeech": "Response for date and time..."
+                        "textToSpeech": "ticket confirmation..."
                       }
                     },
+                ],
+                  "suggestions": [
                     {
-                        "basicCard": {
-                          "title": "Ticket confirmation",
-                          "image": {
-                            "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
-                            "accessibilityText": "Google Logo"
-                          },
-                        }
+                      "title": "confirm ticket"
+                    },
+                    {
+                      "title": "cancel ticket"
                     }
-                    ],
-                //   "suggestions": [
-                //     {
-                //       "title": "confirm ticket"
-                //     },
-                //     {
-                //       "title": "cancel ticket"
-                //     }
-                //   ],
-                //   "linkOutSuggestion": {
-                //     "destinationName": "Website",
-                //     "url": "https://assistant.google.com"
-                //   }
-               
-        
-             }
+                  ],
+                  }
             
-            }
+                }
             }
           }
 
@@ -57,6 +40,53 @@ if(req.body.queryResult.intent.displayName == "movie ticket")
 );
 
 } 
+else if(req.body.queryResult.follow-upintent.displayName == "movie ticket - confirmation")
+{
+    res.json(
+    {
+        "payload": {
+          "google": {
+            "expectUserResponse": true,
+            "richResponse": {
+              "items": [
+                {
+                  "simpleResponse": {
+                    "textToSpeech": "This is a Basic Card:"
+                  }
+                },
+                    {  
+                        "basicCard": {
+                          "title": "Ticket confirmation",
+                          "text": "Your ticket has been booked successfully..."
+                        }
+                    }
+               ],
+            }   
+        }
+      }
+    });
+}
+// else if(req.body.queryResult.)
+// {
+//     res.json(
+//     {
+//         "payload": {
+//           "google": {
+//             "expectUserResponse": true,
+//             "richResponse": {
+//               "items": [
+//                     {  
+//                         "basicCard": {
+//                           "title": "Ticket confirmation",
+//                           "text": "Your ticket has been cancelled successfully..."
+//                         }
+//                     }
+//                ],
+//             }   
+//         }
+//       }
+//     });
+// }
 
 });
 app.listen(process.env.PORT,function(req,res){
