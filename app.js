@@ -70,7 +70,7 @@ else if(req.body.queryResult.intent.action == "movieticket.movieticket-custom")
     });
 }
 
-else if(req.body.queryResult.intent.action == "movieticket.movieticket-custom")
+else if(req.body.queryResult.intent.action == "movieticket.movieticket-custom-2")
 {
     console.log("cancelaction",JSON.stringify(req.body));
         res.json(
