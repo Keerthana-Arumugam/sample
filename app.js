@@ -40,7 +40,7 @@ if(req.body.queryResult.intent.displayName == "movie ticket")
 ));
 
 } 
-else if(req.body.queryResult.displayName == "confirm ticket")
+else if(req.body.queryResult.intent.displayName == "confirm ticket")
 {
     res.json(
     {
