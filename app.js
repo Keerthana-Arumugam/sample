@@ -18,7 +18,7 @@ if(req.body.queryResult.intent.displayName == "movie ticket")
                   "items": [
                     {
                       "simpleResponse": {
-                        "textToSpeech": "ticket confirmation..."
+                        "textToSpeech": "click to conform!..."
                       }
                     },
                 ],
