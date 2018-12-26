@@ -40,9 +40,9 @@ if(req.body.queryResult.intent.displayName == "movie ticket") {
 );
 
 } 
-else if(req.body.queryResult.intent.displayName == "confirm ticket")
+else if(req.body.queryResult.intent.action == "confirm ticket")
 {
-    console.log("gg", req.body);
+    console.log("gg", JSON.stringify(req.body));
         res.json(
     {
         "payload": {
