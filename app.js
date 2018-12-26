@@ -41,7 +41,7 @@ if(req.body.queryResult.intent.displayName == "movie ticket") {
 );
 
 } 
-else if(req.body.queryResult.intent.action == "movie ticket.confirm ticket")
+else if(req.body.queryResult.intent.action == "movieticket.movieticket-custom")
 {
     console.log("intentaction",JSON.stringify(req.body));
         res.json(
@@ -70,7 +70,7 @@ else if(req.body.queryResult.intent.action == "movie ticket.confirm ticket")
     });
 }
 
-else if(req.body.queryResult.intent.action == "movie ticket.cancel ticket")
+else if(req.body.queryResult.intent.action == "movieticket.movieticket-custom")
 {
     console.log("cancelaction",JSON.stringify(req.body));
         res.json(
