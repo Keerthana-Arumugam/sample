@@ -8,8 +8,8 @@ app.post('/',function(req,res){
     console.log("post method");
 
 if(req.body.queryResult.intent.displayName == "movie ticket")
-{
-    console.log(res.json(
+{ console.log("ff", req.body);
+    res.json(
     {
             "payload": {
               "google": {
@@ -37,12 +37,13 @@ if(req.body.queryResult.intent.displayName == "movie ticket")
           }
 
       
-));
+);
 
 } 
 else if(req.body.queryResult.intent.displayName == "confirm ticket")
 {
-    res.json(
+    console.log("gg", req.body);
+        res.json(
     {
         "payload": {
           "google": {
