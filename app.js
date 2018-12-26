@@ -69,27 +69,36 @@ else if(req.body.queryResult.intent.action == "movie ticket.confirm ticket")
       }
     });
 }
-// else if(req.body.queryResult.intent.action == "")
-// {
-//     res.json(
-//     {
-//         "payload": {
-//           "google": {
-//             "expectUserResponse": true,
-//             "richResponse": {
-//               "items": [
-//                     {  
-//                         "basicCard": {
-//                           "title": "Ticket confirmation",
-//                           "text": "Your ticket has been cancelled successfully..."
-//                         }
-//                     }
-//                ],
-//             }   
-//         }
-//       }
-//     });
-// }
+
+else if(req.body.queryResult.intent.action == "movie ticket.cancel ticket")
+{
+    console.log("cancelaction",JSON.stringify(req.body));
+        res.json(
+    {
+        "payload": {
+          "google": {
+            "expectUserResponse": true,
+            "richResponse": {
+              "items": [
+                {
+                  "simpleResponse": {
+                    "textToSpeech": "This is a Basic Card:",
+                    "displayText" : "ticket cancelation"
+                  }
+                },
+                    {  
+                        "basicCard": {
+                          "title": "Ticket Cancellation",
+                          "text": "Your ticket has been cancelled successfully..."
+                        }
+                    }
+               ],
+            }   
+        }
+      }
+    });
+}
+
 
 });
 app.listen(process.env.PORT,function(req,res){
