@@ -9,7 +9,7 @@ app.post('/',function(req,res){
 
 if(req.body.queryResult.intent.displayName == "movie ticket")
 {
-    res.json(
+    console.log(res.json(
     {
             "payload": {
               "google": {
@@ -37,7 +37,7 @@ if(req.body.queryResult.intent.displayName == "movie ticket")
           }
 
       
-);
+));
 
 } 
 else if(req.body.queryResult.follow-upintent.displayName == "movie ticket - confirmation")
